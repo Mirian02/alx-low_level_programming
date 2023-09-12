@@ -1,22 +1,26 @@
 #include <stdio.h>
 /**
- * main - Prints all possible combinations of two two-digit numbers
+ * main - Prints all possible different combinations of three digits.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int n, m, i;
-for (n = 48; n < 58; n++)
+int i, j, k;
+for (i = 0; i < 8; i++)
 {
-for (m = n + 1; m < 58; m++)
+for (j = i + 1; j < 9; j++)
 {
-putchar(n);
-putchar(m);
-if (n != 56 || m != 57)
+for (k = j + 1; k < 10; k++)
+{
+putchar(i + '0');
+putchar(j + '0');
+putchar(k + '0');
+if (i != 7 || j != 8 || k != 9)
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
